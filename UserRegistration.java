@@ -1,10 +1,9 @@
-package com.junituc6;
+package com.junituc7;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class UserRegistration {
-
 
 	/*
 	 * method to check first name
@@ -72,9 +71,11 @@ public class UserRegistration {
 
 	}
 
+	public boolean passwordRule3(String password) {
+		String regex = "^[A-za-z]{8}[0-9]{1}";
+		Pattern pattern = Pattern.compile(regex);
+		Matcher matcher = pattern.matcher(password);
+		return matcher.matches();
 
-
-
-
+	}
 }
-
