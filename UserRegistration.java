@@ -1,4 +1,4 @@
-package com.junituc7;
+package com.junituc8;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -76,6 +76,14 @@ public class UserRegistration {
 		Pattern pattern = Pattern.compile(regex);
 		Matcher matcher = pattern.matcher(password);
 		return matcher.matches();
+	}
 
+	public boolean passwordRule4(String password) {
+		String regex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\\\d)(?=.*[@$!%*?&])[A-Za-z\"\r\n"
+				+ "+ \"\\\\d@$!%*?&]{8,}$";
+		Pattern pattern = Pattern.compile(regex);
+		Matcher matcher = pattern.matcher(password);
+		return matcher.matches();
 	}
 }
+
