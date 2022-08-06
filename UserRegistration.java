@@ -1,9 +1,10 @@
-package com.junituc3;
+package com.junituc4;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class UserRegistration {
+
 
 	/*
 	 * method to check first name
@@ -40,6 +41,15 @@ public class UserRegistration {
 	        return matcher.matches();
 	    }
 
-
+	 /*
+	   * method to validate mobile number
+	   *
+	   */
+	   public boolean phoneNumber(String phoneNumber) {
+	        String regex = "^(91)?[7-9][0-9]{9}";
+	        Pattern pattern = Pattern.compile(regex);
+	        Matcher matcher = pattern.matcher(phoneNumber);
+	        return matcher.matches();
+	    }
 
 }
